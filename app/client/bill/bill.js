@@ -21,7 +21,7 @@ Template.bill.rendered = function(){
     typeof(senators);
 
     senators.objects.forEach(function(senator){
-      // console.log(senator);
+      console.log("sentaor" + senator);
       senator.thump = {
         // name: senator.person.name,
         name: senator.person.firstname.toLowerCase() +"_"+ senator.person.lastname.toLowerCase(),
@@ -71,7 +71,7 @@ Template.bill.rendered = function(){
           if(e.contribtors)
             return node.name == e.contributors;
         });
-        
+
         if(! node_index){
           var obj = e;
           if(obj.contributors)
@@ -110,7 +110,7 @@ Template.bill.rendered = function(){
       links.push({source:sourceIndex, target:targetIndex, value:preLinks[prelink].value});
 
     }
-    console.log("yo")
+    // console.log("yo")
 console.log(nodes);
 console.log(links);
 
